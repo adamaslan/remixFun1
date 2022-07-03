@@ -40,18 +40,6 @@ async function seed() {
     },
   });
 
-  console.log(`Database has been seeded. 🌱`);
-}
-
-seed()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
-
   const posts = [
     {
       slug: "my-first-post",
@@ -96,3 +84,15 @@ seed()
       create: post,
     });
   }
+
+  console.log(`Database has been seeded. 🌱`);
+}
+
+seed()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(async () => {
+    await prisma.$disconnect();
+  });
