@@ -23,6 +23,9 @@ export default function Index() {
                   Indie Stack
                 </span>
               </h1>
+              <Link to="admin" className="text-red-600 underline">
+  Admin
+</Link>
               <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
                 Check the README.md file for instructions on how to get this
                 project deployed.
